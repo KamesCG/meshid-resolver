@@ -3,13 +3,16 @@
     "development": {
       "presets": ["env"],
       "plugins": [
+        "transform-runtime",
         "add-module-exports",
         "transform-object-rest-spread"
+        
       ]
     },
     "production": {
       "presets": ["env", "minify"],
       "plugins": [
+        "transform-runtime",
         "add-module-exports",
         "transform-object-rest-spread"
       ]
