@@ -1,14 +1,8 @@
-import { assert } from 'chai';
-import defaultAwesomeFunction, { awesomeFunction } from '../src';
+import { assert, should } from 'chai';
+import didJWT, { verify } from '../src';
 
-describe('Awesome test.', () => {
-  it('should test default awesome function', () => {
-    const expectedVal = 'I am the Default Awesome Function, fellow comrade! - Dinesh';
-    assert(defaultAwesomeFunction('Dinesh') === expectedVal, 'Default not awesome :(');
-  });
-
-  it('should test awesome function', () => {
-    const expectedVal = 'I am just an Awesome Function';
-    assert(awesomeFunction() === expectedVal, 'Named awesome :(');
+describe('Functions Tests', () => {
+  it('should test the verify function', () => {
+    assert.typeOf(verify, 'object', 'Verify Exists');
   });
 });

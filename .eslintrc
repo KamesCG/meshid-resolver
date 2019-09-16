@@ -5,6 +5,9 @@
     "mocha": true
   },
   "rules": {
-    "comma-dangle": ["error", "only-multiline"]
+    "comma-dangle": ["error", "only-multiline"],
+    "no-extra-semi": 1,
+    "no-unused-vars": 1,
+    "semi": 0
   }
 }
