@@ -1,24 +1,22 @@
 
 import didJWT from 'did-jwt';
-import httpsResolver from 'https-did-resolver';
-import muportResolver from 'muport-did-resolver'
+import { Resolver } from 'did-resolver'
+import WebResolverConfig from 'web-did-resolver'
+import ethr from 'ethr-did-resolver'
 
-httpsResolver();
-muportResolver();
+const resolver = new Resolver({
+  ethr,
+  https: WebResolverConfig().web
+})
 
-const defaultAwesomeFunction = (name) => {
-  const returnStr = `I am the Default Awesome Function, fellow comrade! - ${name}`;
-  return returnStr;
-};
+const defaultOptions = {
+  resolver
+}
 
-const awesomeFunction = () => 'I am just an Awesome Function';
-
-const verify = async (jwt) => {
-  const proof = await didJWT.verifyJWT(jwt);
-  console.log(proof);
-  return proof;
-};
+const create = async (claim, signer) => didJWT.create(claim, signer)
+const signer = async key => didJWT.SimpleSigner(key)
+const verify = async (jwt, options) => didJWT.verifyJWT(jwt, { ...defaultOptions, ...options })
 
 export default didJWT;
 
-export { verify };
+export { create, signer, verify };

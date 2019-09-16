@@ -2,19 +2,9 @@
 
 [![Build Status](https://travis-ci.org/kamescg/meshid-resolver.svg?branch=master)](https://travis-ci.org/kamescg/meshid-resolver) [![dependencies Status](https://david-dm.org/kamescg/meshid-resolver/status.svg)](https://david-dm.org/kamescg/meshid-resolver) [![devDependencies Status](https://david-dm.org/kamescg/meshid-resolver/dev-status.svg)](https://david-dm.org/kamescg/meshid-resolver?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**Start developing your NPM module in seconds** ✨
-
-Readymade boilerplate setup with all the best practices to kick start your npm/node module development.
-
-Happy hacking =)
 
 # Features
-
-* **ES6/ESNext** - Write _ES6_ code and _Babel_ will transpile it to ES5 for backwards compatibility
-* **Test** - _Mocha_ with _Istanbul_ coverage
-* **Lint** - Preconfigured _ESlint_ with _Airbnb_ config
-* **CI** - _TravisCI_ configuration setup
-* **Minify** - Built code will be minified for performance
+Resolve decentralized identifiers using common Ethereum ecosystem DID specifications. 
 
 # Commands
 - `npm run clean` - Remove `lib/` directory
@@ -27,10 +17,6 @@ Happy hacking =)
 - `npm run cover` - Get coverage report for your code.
 - `npm run build` - Babel will transpile ES6 => ES5 and minify the code.
 - `npm run prepublish` - Hook for npm. Do all the checks before publishing your module.
-
-# Installation
-Just clone this repo and remove `.git` folder.
-
 
 # License
 
