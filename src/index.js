@@ -2,10 +2,8 @@
 import didJWT from 'did-jwt';
 import { Resolver } from 'did-resolver'
 import WebResolverConfig from 'web-did-resolver'
-import ethr from 'ethr-did-resolver'
 
 const resolver = new Resolver({
-  ethr,
   https: WebResolverConfig().web
 })
 
